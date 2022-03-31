@@ -1,0 +1,36 @@
+[user]
+	name = sinksky
+	email = sink.sky@qq.com
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	co = checkout
+	cf = config
+	graph = log --graph --decorate --oneline --all
+[core]
+	autocrlf = true
+	editor = code -w
+	# commentChar = ";"
+
+# URL shorthands
+
+[url "git@github.com:"]
+
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+	insteadOf = "gist:"
