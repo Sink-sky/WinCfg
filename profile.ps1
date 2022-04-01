@@ -1,5 +1,6 @@
 Import-Module posh-git
 Import-Module oh-my-posh
+Import-Module z
 Import-Module PSReadLine
 Set-Theme Paradox
 
@@ -16,11 +17,5 @@ Set-PSReadLineKeyHandler -Key DownArrow -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchForward()
     [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine()
 } # 设置向下键为前向搜索历史纪录
-
-# Chocolatey profile
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}
 
 Clear-Host
