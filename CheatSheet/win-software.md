@@ -20,3 +20,8 @@
 
 - Chocolatey
 - Vcpkg
+
+- OpenArk
+- Geek Uninstaller
+- Autoruns
+- WizTree

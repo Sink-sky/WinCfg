@@ -9,6 +9,7 @@ Set-PSReadLineOption -PredictionSource History # 设置预测文本来源为历�
 Set-PSReadlineKeyHandler -Key Tab -Function Complete # 设置 Tab 键补全
 Set-PSReadLineKeyHandler -Key "Ctrl+d" -Function MenuComplete # 设置 Ctrl+d 为菜单补全和 Intellisense
 Set-PSReadLineKeyHandler -Key "Ctrl+z" -Function Undo # 设置 Ctrl+z 为撤销
+
 Set-PSReadLineKeyHandler -Key UpArrow -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchBackward()
     [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine()
