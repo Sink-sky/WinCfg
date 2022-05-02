@@ -48,7 +48,8 @@
                 "face": "CaskaydiaCove NF"
             },
             "historySize": 50000,
-            "startingDirectory": "."
+            "startingDirectory": ".",
+            "useAcrylic": true
         },
         "list": [
             {
