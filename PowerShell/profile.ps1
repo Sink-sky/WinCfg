@@ -30,10 +30,10 @@ function which {
   
 if (![System.Console]::IsOutputRedirected) {
     Import-Module posh-git
-    Import-Module oh-my-posh
     Import-Module z
     Import-Module PSReadLine
-    Set-Theme Paradox
+    # Import-Module oh-my-posh
+    # Set-Theme Paradox
     
     Set-PSReadLineOption -PredictionSource History # 设置预测文本来源为历史记录
     Set-PSReadLineOption -PredictionViewStyle ListView # 设置预测文本以列表形式展开
@@ -50,7 +50,9 @@ if (![System.Console]::IsOutputRedirected) {
         [Microsoft.PowerShell.PSConsoleReadLine]::HistorySearchForward()
         [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine()
     } # 设置向下键为前向搜索历史纪录
-    
+
+    Invoke-Expression (&starship init powershell)
+
     # Chocolatey profile
     $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
     if (Test-Path($ChocolateyProfile)) {
@@ -59,7 +61,3 @@ if (![System.Console]::IsOutputRedirected) {
   
     Clear-Host
 }
-  
-  
-  
-  

@@ -2,7 +2,8 @@
 # winget install Microsoft.PowerShell
 
 Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser -RequiredVersion 2.0.496
+# Install-Module oh-my-posh -Scope CurrentUser -RequiredVersion 2.0.496
+winget install starship
 Install-Module z -Scope CurrentUser
 Install-Module -Name PSReadLine -Force
 
